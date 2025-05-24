@@ -1,0 +1,13 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "测试 mini-pnpm 的项目",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "axios": "^1.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
