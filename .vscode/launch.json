@@ -1,0 +1,74 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Debug mini-pnpm install",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/cli/index.ts",
+      "args": ["install"],
+      "cwd": "${workspaceFolder}/test-project",
+      "runtimeArgs": ["-r", "tsx/cjs"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Debug mini-pnpm add",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/cli/index.ts",
+      "args": ["add", "lodash"],
+      "cwd": "${workspaceFolder}/test-project",
+      "runtimeArgs": ["-r", "tsx/cjs"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Debug mini-pnpm list",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/cli/index.ts",
+      "args": ["list"],
+      "cwd": "${workspaceFolder}/test-project",
+      "runtimeArgs": ["-r", "tsx/cjs"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Debug mini-pnpm remove",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/cli/index.ts",
+      "args": ["remove", "lodash"],
+      "cwd": "${workspaceFolder}/test-project",
+      "runtimeArgs": ["-r", "tsx/cjs"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Debug Current File",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "runtimeArgs": ["-r", "tsx/cjs"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+} 

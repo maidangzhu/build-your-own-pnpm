@@ -12,7 +12,11 @@
     "start": "node dist/cli/index.js",
     "test": "echo \"暂时没有测试\" && exit 1"
   },
-  "keywords": ["pnpm", "package-manager", "learning"],
+  "keywords": [
+    "pnpm",
+    "package-manager",
+    "learning"
+  ],
   "author": "你的名字",
   "license": "MIT",
   "devDependencies": {
@@ -29,6 +33,7 @@
     "fs-extra": "^11.0.0",
     "semver": "^7.5.0",
     "tar": "^6.2.0",
-    "yaml": "^2.3.0"
+    "yaml": "^2.3.0",
+    "lodash": "^4.17.21"
   }
-} 
+}
