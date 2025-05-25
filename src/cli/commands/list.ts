@@ -1,11 +1,17 @@
 import { Command } from 'commander';
 import * as path from 'path';
 import * as fs from 'fs-extra';
-import { Store } from '../../core';
 import { PackageJson } from '../../types';
 
 /**
  * list 命令 - 列出已安装的包
+ * 原理
+ * - 读取 package.json 文件
+ * - 读取 node_modules 目录
+ * - 打印依赖以及对应状态，状态包括：已安装、已链接、未安装、状态未知
+ * - 如果指定了 --depth 参数，则打印依赖树
+ * - 如果指定了 --dev 参数，则打印开发依赖
+ * - 如果指定了 --store 参数，则使用指定的 store 目录
  */
 export const createListCommand = (): Command => {
   const command = new Command('list')
