@@ -6,6 +6,12 @@ import { PackageJson } from '../../types';
 
 /**
  * remove 命令 - 移除依赖
+ * 原理：
+ * 1. 确保 store 存在
+ * 2. 读取 package.json 文件，并解析为对象
+ * 3. 从 package.json 对象内移除依赖
+ * 4. 写回 package.json 文件
+ * 5. 自动运行 install 来安装新添加的依赖
  */
 export const createRemoveCommand = (): Command => {
   const command = new Command('remove')

@@ -6,6 +6,13 @@ import { PackageJson } from '../../types';
 
 /**
  * add 命令 - 添加新依赖
+ * 原理：
+ * 1. 确保 store 存在
+ * 2. 读取 package.json 文件，并解析为对象
+ * 3. 解析安装包规格，获取包名和版本号，如果没有带版本号，通过 axios 请求 npm registry 获取最新版本号
+ * 4. 添加到 package.json 对象内
+ * 5. 写回 package.json 文件
+ * 6. 自动运行 install 来安装新添加的依赖
  */
 export const createAddCommand = (): Command => {
   const command = new Command('add')
